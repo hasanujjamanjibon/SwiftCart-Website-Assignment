@@ -29,19 +29,21 @@
     <!-- Header Section Start -->
     <header class="shadow-sm fixed w-full bg-white z-50">
       <nav>
-        <div class="navbar max-w-3xl mx-auto">
+        <div class="navbar max-w-3xl mx-auto px-4 sm:px-0">
           <div class="navbar-start">
             <a class="text-xl text-indigo-600 font-semibold">SwiftCart</a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="flex gap-4 px-1 font-semibold">
-              <li><a href="/index.html" class="text-indigo-600">Home</a></li>
               <li>
                 <a
-                  href="products.html"
+                  href="/index.html"
                   class="cursor-pointer hover:text-indigo-600"
-                  >Products</a
+                  >Home</a
                 >
+              </li>
+              <li>
+                <a href="products.html" class="text-indigo-600">Products</a>
               </li>
               <li><a class="cursor-pointer hover:text-indigo-600">About</a></li>
               <li>
@@ -71,13 +73,15 @@
                 tabindex="-1"
                 class="menu menu-sm font-semibold dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
-                <li><a href="/index.html" class="text-indigo-600">Home</a></li>
                 <li>
                   <a
-                    href="products.html"
+                    href="/index.html"
                     class="cursor-pointer hover:text-indigo-600"
-                    >Products</a
+                    >Home</a
                   >
+                </li>
+                <li>
+                  <a href="products.html" class="text-indigo-600">Products</a>
                 </li>
                 <li>
                   <a class="cursor-pointer hover:text-indigo-600">About</a>
@@ -142,6 +146,45 @@
           <!-- Product Card -->
         </div>
       </section>
+      <!-- Modal -->
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box p-10">
+          <h2 id="product-title" class="text-lg font-bold"></h2>
+          <p id="product-description" class="py-4"></p>
+          <div>
+            <div class="text-xs py-2 flex justify-between items-center">
+              <p id="product-price" class="font-bold text-lg"></p>
+              <div class="text-lg">
+                <i
+                  class="fa-solid fa-star fa-lg"
+                  style="color: rgba(237, 184, 0, 1)"
+                ></i>
+                <span id="product-rating"> </span>
+              </div>
+            </div>
+
+            <div class="modal-action">
+              <!-- Add to Cart Button -->
+
+              <button
+                class="px-4 py-1 px-6 cursor-pointer border border-zinc-200 rounded-md hover:bg-indigo-900 transition delay-150 duration-300 ease-in-out flex gap-4 items-center text-sm bg-indigo-600 text-white"
+              >
+                <i
+                  class="fa-solid fa-cart-shopping fa-sm"
+                  style="color: #ffffff"
+                ></i>
+                Add
+              </button>
+
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn px-6 btn-outline btn-error">Close</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </dialog>
+      <!-- Modal end -->
     </main>
     <!-- Footer Section Start -->
     <footer class="bg-slate-950">
@@ -199,11 +242,26 @@
           <nav
             class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
           >
-            <i class="fa-brands fa-facebook-f" style="color: #d1d5dc"></i>
-            <i class="fa-brands fa-twitter" style="color: #d1d5dc"></i>
-            <i class="fa-brands fa-instagram" style="color: #d1d5dc"></i>
-            <i class="fa-brands fa-linkedin-in" style="color: #d1d5dc"></i>
-            <i class="fa-solid fa-envelope" style="color: #d1d5dc"></i>
+            <i
+              class="fa-brands cursor-pointer hover:scale-125 transition delay-150 duration-300 ease-in-out fa-facebook-f"
+              style="color: #d1d5dc"
+            ></i>
+            <i
+              class="fa-brands cursor-pointer hover:scale-125 transition delay-150 duration-300 ease-in-out fa-twitter"
+              style="color: #d1d5dc"
+            ></i>
+            <i
+              class="fa-brands cursor-pointer hover:scale-125 transition delay-150 duration-300 ease-in-out fa-instagram"
+              style="color: #d1d5dc"
+            ></i>
+            <i
+              class="fa-brands cursor-pointer hover:scale-125 transition delay-150 duration-300 ease-in-out fa-linkedin-in"
+              style="color: #d1d5dc"
+            ></i>
+            <i
+              class="fa-solid cursor-pointer hover:scale-125 transition delay-150 duration-300 ease-in-out fa-envelope"
+              style="color: #d1d5dc"
+            ></i>
           </nav>
         </div>
       </div>

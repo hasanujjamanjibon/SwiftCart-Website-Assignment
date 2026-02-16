@@ -1,6 +1,11 @@
 console.log('Connected');
 const allProductContainer = document.getElementById('all-product-container');
 const catagoriesEl = document.getElementById('catagories');
+const modal = document.getElementById('my_modal_1');
+const productTitle = document.getElementById('product-title');
+const productPrice = document.getElementById('product-price');
+const productDescription = document.getElementById('product-description');
+const productRating = document.getElementById('product-rating');
 
 // fetchDataForAllProductsPage
 const fetchDataForAllProductsPage = async () => {
@@ -32,17 +37,19 @@ const loadDataOnProductsPage = (products) => {
       <div class="flex flex-row justify-center items-center gap-8">
         <!-- View Button -->
         <div>
-          <button
-            class="px-4 py-1 px-4 curson-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm"
+          <button onclick="openModal(${id})"
+            class="btn"
           >
             <i class="fa-regular fa-eye fa-sm" style="color: #000000"></i>
             Details
           </button>
+
+    
         </div>
         <!-- Add to Cart Button -->
         <div>
           <button
-            class="px-4 py-1 px-4 curson-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm bg-indigo-600 text-white"
+            class="btn px-4 py-1 hover:bg-indigo-900 transition delay-150 duration-300 ease-in-out  px-4 cursor-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm bg-indigo-600 text-white"
           >
             <i
               class="fa-solid fa-cart-shopping fa-sm"
@@ -51,6 +58,7 @@ const loadDataOnProductsPage = (products) => {
             Add
           </button>
         </div>
+        
       </div>
     </div>
   </div>
@@ -63,13 +71,11 @@ const loadDataOnProductsPage = (products) => {
 const loadCatagories = (categories) => {
   categories.forEach((category) => {
     const div = document.createElement('div');
-    div.className = 'badge border border-gray-300 cursor-pointer';
+    div.className = 'badge border border-gray-300 capitalize cursor-pointer';
     div.textContent = category;
-
     div.addEventListener('click', () => {
       categoryWiseProduct(category);
     });
-
     catagoriesEl.appendChild(div);
   });
 };
@@ -80,6 +86,25 @@ const categoryWiseProduct = async (category) => {
   );
   const data = await res.json();
   loadDataOnProductsPage(data);
+};
+
+const openModal = async (idParams) => {
+  const res = await fetch(`https://fakestoreapi.com/products/${idParams}`);
+  const data = await res.json();
+
+  const {
+    id,
+    title,
+    price,
+    description,
+    rating: { rate },
+  } = data;
+  console.log(data);
+  productTitle.textContent = title;
+  productDescription.textContent = description;
+  productPrice.textContent = '$' + price;
+  productRating.textContent = rate;
+  my_modal_1.showModal();
 };
 
 // fetchCatagories

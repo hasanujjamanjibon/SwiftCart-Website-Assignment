@@ -30,8 +30,8 @@ const loadDataOnHomePage = (products) => {
       <div class="flex flex-row justify-center items-center gap-8">
         <!-- View Button -->
         <div>
-          <button
-            class="px-4 py-1 px-4 curson-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm"
+           <button onclick="openModal(${id})"
+            class="btn"
           >
             <i class="fa-regular fa-eye fa-sm" style="color: #000000"></i>
             Details
@@ -40,7 +40,7 @@ const loadDataOnHomePage = (products) => {
         <!-- Add to Cart Button -->
         <div>
           <button
-            class="px-4 py-1 px-4 curson-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm bg-indigo-600 text-white"
+            class="px-4 hover:bg-indigo-900 transition delay-150 duration-300 ease-in-out  py-1 px-4 cursor-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm bg-indigo-600 text-white"
           >
             <i
               class="fa-solid fa-cart-shopping fa-sm"
