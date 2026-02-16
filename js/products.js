@@ -1,18 +1,17 @@
 console.log('Connected');
-const productContainer = document.getElementById('product-container');
+const allProductContainer = document.getElementById('all-product-container');
 
-const url = `https://fakestoreapi.com/products/?limit=`;
-
-const fetchDataForHomePage = async (limit) => {
-  const res = await fetch(url + `${limit}`);
+const fetchDataForAllProductsPage = async () => {
+  const res = await fetch(`https://fakestoreapi.com/products/`);
   const data = await res.json();
-  loadDataOnHomePage(data);
+  console.log(data);
+  loadDataOnProductsPage(data);
 };
 
-const loadDataOnHomePage = (products) => {
+const loadDataOnProductsPage = (products) => {
   products?.forEach(
     ({ id, title, price, category, image, rating: { rate, count } }) => {
-      productContainer.innerHTML += `
+      allProductContainer.innerHTML += `
   <div class="card bg-base-100 w-88 md:w-full md:max-w-88 mx-auto shadow-sm">
     <figure class="bg-indigo-100 p-4 rounded-t-lg">
       <img src="${image}" class="h-40 w-32 mx-auto" alt="Shoes" />
@@ -57,4 +56,4 @@ const loadDataOnHomePage = (products) => {
   );
 };
 
-fetchDataForHomePage(3);
+fetchDataForAllProductsPage();

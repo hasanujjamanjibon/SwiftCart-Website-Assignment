@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Daisy UI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>SwiftCart - Most Affordable E-Commerce Platform</title>
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header class="shadow-sm fixed w-full bg-white z-50">
+      <nav>
+        <div class="navbar max-w-3xl mx-auto">
+          <div class="navbar-start">
+            <a class="text-xl text-indigo-600 font-semibold">SwiftCart</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="flex gap-4 px-1 font-semibold">
+              <li><a href="/index.html" class="text-indigo-600">Home</a></li>
+              <li>
+                <a
+                  href="products.html"
+                  class="cursor-pointer hover:text-indigo-600"
+                  >Products</a
+                >
+              </li>
+              <li><a class="cursor-pointer hover:text-indigo-600">About</a></li>
+              <li>
+                <a class="cursor-pointer hover:text-indigo-600">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="-1"
+                class="menu menu-sm font-semibold dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a href="/index.html" class="text-indigo-600">Home</a></li>
+                <li>
+                  <a
+                    href="products.html"
+                    class="cursor-pointer hover:text-indigo-600"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a class="cursor-pointer hover:text-indigo-600">About</a>
+                </li>
+                <li>
+                  <a class="cursor-pointer hover:text-indigo-600">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown dropdown-hover">
+              <div tabindex="0" role="button" class="m-1">
+                <div class="indicator cursor-pointer">
+                  <span
+                    class="indicator-item badge p-0 text-indigo-700 bg-white p-1"
+                    >0</span
+                  >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#000"
+                  >
+                    <path
+                      d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <ul
+                tabindex="-1"
+                class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li><a>Total</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <main class="bg-zinc-50 min-h-[calc(100vh-273px)]">
+      <section class="max-w-3xl mx-auto pt-20">
+        <!-- <p class="mx-w-lg text-center text-zinc-600">
+          We provide the best shopping experience with top-notch services.
+        </p> -->
+
+        <!-- Product Container Box -->
+        <div
+          id="all-product-container"
+          class="space-y-4 md:space-y-0 md:grid sm:grid-cols-2 gap-4 justify-items-center lg:grid-cols-3"
+        >
+          <!-- Product Card -->
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section Start -->
+    <footer class="bg-slate-950">
+      <div class="max-w-3xl mx-auto">
+        <div class="footer sm:footer-horizontal md:px-0 text-white p-10">
+          <aside>
+            <a class="text-xl text-indigo-400 font-semibold">SwiftCart</a>
+            <p class="text-gray-400">
+              Your one-stop shop for all your fashion
+              <br />
+              and lifestyle needs. Quality products, fast
+              <br />
+              delivery, and excelle nt support.
+            </p>
+          </aside>
+          <nav>
+            <h6 class="footer-title">QUICK LINKS</h6>
+            <a href="/index.html" class="link link-hover">Home</a>
+            <a href="products.html" class="link link-hover">Products</a>
+            <a class="link link-hover">About</a>
+            <a class="link link-hover">Contact</a>
+          </nav>
+          <nav>
+            <h6 class="footer-title">SUPPORT</h6>
+            <a class="link link-hover">FAQ</a>
+            <a class="link link-hover">Shipping</a>
+            <a class="link link-hover">Returns</a>
+            <a class="link link-hover">Privacy Policy</a>
+          </nav>
+          <form>
+            <h6 class="text-sm uppercase text-gray-400">
+              SUBSCRIBE TO OUR NEWSLETTER
+            </h6>
+            <fieldset class="w-64">
+              <label class="text-white py-4 inline-block"
+                >The latest news, articles, and resources, sent to your inbox
+                weekly.</label
+              >
+              <div class="flex justify-center gap-4">
+                <input
+                  type="text"
+                  placeholder="Enter your email"
+                  class="input input-bordered text-gray-600 text-sm"
+                />
+                <button class="btn btn-primary">Subscribe</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <hr class="" />
+        <div class="footer sm:footer-horizontal text-gray-400 items-center p-4">
+          <aside class="grid-flow-col items-center">
+            <p>&copy; 2025 SwiftCart, Inc. All rights reserved.</p>
+          </aside>
+          <nav
+            class="grid-flow-col gap-4 md:place-self-center md:justify-self-end"
+          >
+            <i class="fa-brands fa-facebook-f" style="color: #d1d5dc"></i>
+            <i class="fa-brands fa-twitter" style="color: #d1d5dc"></i>
+            <i class="fa-brands fa-instagram" style="color: #d1d5dc"></i>
+            <i class="fa-brands fa-linkedin-in" style="color: #d1d5dc"></i>
+            <i class="fa-solid fa-envelope" style="color: #d1d5dc"></i>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <script src="/js/products.js"></script>
+  </body>
+</html>

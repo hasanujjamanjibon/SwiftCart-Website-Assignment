@@ -62,9 +62,13 @@
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="flex gap-4 px-1 font-semibold">
-              <li><a class="text-indigo-600">Home</a></li>
+              <li><a href="index.html" class="text-indigo-600">Home</a></li>
               <li>
-                <a class="cursor-pointer hover:text-indigo-600">Products</a>
+                <a
+                  href="./pages/products.html"
+                  class="cursor-pointer hover:text-indigo-600"
+                  >Products</a
+                >
               </li>
               <li><a class="cursor-pointer hover:text-indigo-600">About</a></li>
               <li>
@@ -94,9 +98,13 @@
                 tabindex="-1"
                 class="menu menu-sm font-semibold dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
-                <li><a class="text-indigo-600">Home</a></li>
+                <li><a href="index.html" class="text-indigo-600">Home</a></li>
                 <li>
-                  <a class="cursor-pointer hover:text-indigo-600">Products</a>
+                  <a
+                    href="./pages/products.html"
+                    class="cursor-pointer hover:text-indigo-600"
+                    >Products</a
+                  >
                 </li>
                 <li>
                   <a class="cursor-pointer hover:text-indigo-600">About</a>
@@ -282,7 +290,7 @@
         <!-- Product Container Box -->
         <div
           id="product-container"
-          class="space-y-4 sm:space-y-0 sm:flex sm:flex-wrap md:items-center sm:justify-start xl:justify-between py-4"
+          class="space-y-4 md:space-y-0 md:grid sm:grid-cols-2 gap-4 justify-items-center lg:grid-cols-3"
         >
           <!-- Product Card -->
         </div>
@@ -305,8 +313,8 @@
           </aside>
           <nav>
             <h6 class="footer-title">QUICK LINKS</h6>
-            <a class="link link-hover">Home</a>
-            <a class="link link-hover">Products</a>
+            <a href="index.html" class="link link-hover">Home</a>
+            <a href="./pages/products.html" class="link link-hover">Products</a>
             <a class="link link-hover">About</a>
             <a class="link link-hover">Contact</a>
           </nav>
