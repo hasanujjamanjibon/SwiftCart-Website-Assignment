@@ -11,17 +11,9 @@ const fetchDataForHomePage = async (limit) => {
 
 const loadDataOnHomePage = (products) => {
   products?.forEach(
-    ({
-      id,
-      title,
-      price,
-      description,
-      category,
-      image,
-      rating: { rate, count },
-    }) => {
+    ({ id, title, price, category, image, rating: { rate, count } }) => {
       productContainer.innerHTML += `
- <div class="rounded-lg border-zinc-200 border overflow-hidden">
+ <div class="rounded-lg border-zinc-200 border overflow-hidden sm:max-w-[350px] mx-auto">
             <!-- product Image -->
             <div class="bg-indigo-100 p-4  rounded-t-lg">
               <img
@@ -45,7 +37,7 @@ const loadDataOnHomePage = (products) => {
                   ${rate} (${count})</span
                 >
               </div>
-              <p class="text-xs truncate">${title}</p>
+              <p class="text-xs  ${title.length > 30 && 'truncate'}">${title}</p>
               <p class="font-bold text-md">${price}</p>
               <div class="flex justify-between pt-2">
                 <!-- View Button -->

@@ -31,7 +31,7 @@
       <nav>
         <div class="navbar max-w-3xl mx-auto">
           <div class="navbar-start">
-            <div class="dropdown">
+            <!-- <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@
                 <li><a>About</a></li>
                 <li><a>Contact</a></li>
               </ul>
-            </div>
+            </div> -->
             <a class="text-xl text-indigo-600 font-semibold">SwiftCart</a>
           </div>
           <div class="navbar-center hidden lg:flex">
@@ -73,6 +73,39 @@
             </ul>
           </div>
           <div class="navbar-end">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="-1"
+                class="menu menu-sm font-semibold dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a class="text-indigo-600">Home</a></li>
+                <li>
+                  <a class="cursor-pointer hover:text-indigo-600">Products</a>
+                </li>
+                <li>
+                  <a class="cursor-pointer hover:text-indigo-600">About</a>
+                </li>
+                <li>
+                  <a class="cursor-pointer hover:text-indigo-600">Contact</a>
+                </li>
+              </ul>
+            </div>
             <div class="dropdown dropdown-hover">
               <div tabindex="0" role="button" class="m-1">
                 <div class="indicator cursor-pointer">
@@ -128,15 +161,19 @@
 
     <main class="bg-zinc-50">
       <!-- WhyChooseUs Section Start -->
-      <section class="py-20 max-w-3xl mx-auto">
+      <section class="py-20 max-w-3xl mx-auto px-4 md:px-0">
         <h2 class="font-bold text-center text-xl">Why Choose Us</h2>
         <p class="mx-w-lg text-center text-zinc-600">
           We provide the best shopping experience with top-notch services.
         </p>
         <!-- Box Container -->
-        <div class="flex justify-between mt-16">
+        <div
+          class="md:flex flex-wrap justify-between mt-16 space-y-12 lg:space-y-0"
+        >
           <!-- Box 1 - Fast Delivery -->
-          <div class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px]">
+          <div
+            class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px] mx-auto"
+          >
             <div
               class="rounded-md border-white shadow-lg border-2 relative -top-6 p-2 bg-indigo-100 inline-block"
             >
@@ -160,7 +197,9 @@
             </p>
           </div>
           <!-- Box 2 - 24/7 Support -->
-          <div class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px]">
+          <div
+            class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px] mx-auto"
+          >
             <div
               class="rounded-md border-white shadow-lg border-2 relative -top-6 p-2 bg-indigo-100 inline-block"
             >
@@ -183,7 +222,9 @@
             </p>
           </div>
           <!-- Box 3 - Secure Payment -->
-          <div class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px]">
+          <div
+            class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px] mx-auto"
+          >
             <div
               class="rounded-md border-white shadow-lg border-2 relative -top-6 p-2 bg-indigo-100 inline-block"
             >
@@ -207,7 +248,9 @@
             </p>
           </div>
           <!-- Box 4 - Easy Returns -->
-          <div class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px]">
+          <div
+            class="bg-white rounded-md shadow p-4 pt-0 max-w-[400px] mx-auto"
+          >
             <div
               class="rounded-md border-white shadow-lg border-2 relative -top-6 p-2 bg-indigo-100 inline-block"
             >
@@ -234,10 +277,13 @@
       </section>
       <!-- WhyChooseUs Section End -->
       <!-- TrendingNew Section Start -->
-      <section class="max-w-3xl mx-auto pb-10">
+      <section class="max-w-3xl mx-auto pb-10 px-4">
         <h2 class="font-bold text-xl">Trending Now</h2>
         <!-- Product Container Box -->
-        <div id="product-container" class="grid grid-cols-3 gap-4 py-4">
+        <div
+          id="product-container"
+          class="space-y-4 sm:space-y-0 sm:flex sm:flex-wrap md:items-center sm:justify-start xl:justify-between py-4"
+        >
           <!-- Product Card -->
         </div>
       </section>
