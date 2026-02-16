@@ -1,14 +1,17 @@
 console.log('Connected');
 const allProductContainer = document.getElementById('all-product-container');
+const catagoriesEl = document.getElementById('catagories');
 
+// fetchDataForAllProductsPage
 const fetchDataForAllProductsPage = async () => {
   const res = await fetch(`https://fakestoreapi.com/products/`);
   const data = await res.json();
-  console.log(data);
   loadDataOnProductsPage(data);
 };
 
+// loadDataOnProductsPage
 const loadDataOnProductsPage = (products) => {
+  allProductContainer.innerHTML = '';
   products?.forEach(
     ({ id, title, price, category, image, rating: { rate, count } }) => {
       allProductContainer.innerHTML += `
@@ -56,4 +59,38 @@ const loadDataOnProductsPage = (products) => {
   );
 };
 
+// loadCatagories
+const loadCatagories = (categories) => {
+  categories.forEach((category) => {
+    const div = document.createElement('div');
+    div.className = 'badge border border-gray-300 cursor-pointer';
+    div.textContent = category;
+
+    div.addEventListener('click', () => {
+      categoryWiseProduct(category);
+    });
+
+    catagoriesEl.appendChild(div);
+  });
+};
+
+const categoryWiseProduct = async (category) => {
+  const res = await fetch(
+    `https://fakestoreapi.com/products/category/${category}`,
+  );
+  const data = await res.json();
+  loadDataOnProductsPage(data);
+};
+
+// fetchCatagories
+const fetchCatagories = async () => {
+  const res = await fetch(`https://fakestoreapi.com/products/categories`);
+  const data = await res.json();
+  loadCatagories(data);
+};
+
+// Call fetchCatagories;
+fetchCatagories();
+
+// fetchDataForAllProductsPage
 fetchDataForAllProductsPage();
