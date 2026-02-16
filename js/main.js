@@ -1,9 +1,10 @@
 console.log('Connected');
 const productContainer = document.getElementById('product-container');
-
+let loading = false;
 const url = `https://fakestoreapi.com/products/?limit=`;
 
 const fetchDataForHomePage = async (limit) => {
+  loading = false;
   const res = await fetch(url + `${limit}`);
   const data = await res.json();
   loadDataOnHomePage(data);

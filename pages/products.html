@@ -130,7 +130,8 @@
           id="catagories"
           class="text-center flex flex-wrap justify-center item-center text-zinc-600 py-6 space-x-2 space-y-2"
         >
-          <div
+        
+          <div id="all-category-btn"
             onclick="fetchDataForAllProductsPage()"
             class="badge text-white bg-indigo-600 cursor-pointer"
           >
@@ -146,6 +147,20 @@
           <!-- Product Card -->
         </div>
       </section>
+      <div id="loader" class="h-screen grid place-items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="spinner-1 w-10 h-10 shrink-0 animate-spin"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12.001 5.04a2.32 2.32 0 1 0 0-4.64 2.32 2.32 0 0 0 0 4.64zm0 18.56a2.32 2.32 0 1 0 0-4.64 2.32 2.32 0 0 0 0 4.64zm9.197-14.23a2.32 2.32 0 1 1-2.32-4.02 2.32 2.32 0 0 1 2.32 4.02zM1.956 17.8a2.32 2.32 0 1 0 4.018-2.32 2.32 2.32 0 0 0-4.018 2.32zm16.922.85a2.32 2.32 0 1 1 2.32-4.02 2.32 2.32 0 0 1-2.32 4.02zM1.956 6.2a2.32 2.32 0 1 0 4.018 2.32A2.32 2.32 0 0 0 1.956 6.2z"
+            clip-rule="evenodd"
+            data-original="#000000"
+          />
+        </svg>
+      </div>
       <!-- Modal -->
       <dialog id="my_modal_1" class="modal">
         <div class="modal-box p-10">
@@ -197,7 +212,7 @@
               <br />
               and lifestyle needs. Quality products, fast
               <br />
-              delivery, and excelle nt support.
+              delivery, and excellent support.
             </p>
           </aside>
           <nav>

@@ -6,6 +6,8 @@ const productTitle = document.getElementById('product-title');
 const productPrice = document.getElementById('product-price');
 const productDescription = document.getElementById('product-description');
 const productRating = document.getElementById('product-rating');
+const loader = document.getElementById('loader');
+const allCategoryBtn = document.getElementById('all-category-btn');
 
 // fetchDataForAllProductsPage
 const fetchDataForAllProductsPage = async () => {
@@ -65,6 +67,8 @@ const loadDataOnProductsPage = (products) => {
     `;
     },
   );
+  allCategoryBtn.classList.remove('hidden');
+  loader.classList.add('hidden');
 };
 
 // loadCatagories
@@ -109,6 +113,8 @@ const openModal = async (idParams) => {
 
 // fetchCatagories
 const fetchCatagories = async () => {
+  allCategoryBtn.classList.add('hidden');
+  loader.classList.remove('hidden');
   const res = await fetch(`https://fakestoreapi.com/products/categories`);
   const data = await res.json();
   loadCatagories(data);
