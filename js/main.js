@@ -32,7 +32,7 @@ const loadDataOnHomePage = (products) => {
         <!-- View Button -->
         <div>
            <button onclick="openModal(${id})"
-            class="btn"
+            class="btn px-4"
           >
             <i class="fa-regular fa-eye fa-sm" style="color: #000000"></i>
             Details
@@ -41,7 +41,7 @@ const loadDataOnHomePage = (products) => {
         <!-- Add to Cart Button -->
         <div>
           <button
-            class="px-4 hover:bg-indigo-900 transition delay-150 duration-300 ease-in-out  py-1 px-4 cursor-pointer border border-zinc-200 rounded-md flex gap-4 items-center text-sm bg-indigo-600 text-white"
+class="btn btn-primary px-4"
           >
             <i
               class="fa-solid fa-cart-shopping fa-sm"
