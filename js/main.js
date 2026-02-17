@@ -1,5 +1,6 @@
 console.log('Connected');
 const productContainer = document.getElementById('product-container');
+const productQuantity = document.getElementById('product-quantity');
 let loading = false;
 const url = `https://fakestoreapi.com/products/?limit=`;
 
@@ -40,7 +41,7 @@ const loadDataOnHomePage = (products) => {
         </div>
         <!-- Add to Cart Button -->
         <div>
-          <button
+          <button onclick="addToCart(${id})"
 class="btn btn-primary px-4"
           >
             <i
@@ -58,4 +59,34 @@ class="btn btn-primary px-4"
   );
 };
 
+function addToCart(id) {
+  const products = JSON.parse(localStorage.getItem('products')) || {};
+  if (products[id]) {
+    products[id] += 1;
+  } else {
+    products[id] = 1;
+  }
+  localStorage.setItem('products', JSON.stringify(products));
+  getTotalProductQuantity();
+}
+
+const getTotalProductQuantity = () => {
+  const products = JSON.parse(localStorage.getItem('products')) || {};
+  let quantityArray = [];
+  if (products) {
+    for (const key in products) {
+      quantityArray.push(products[key]);
+    }
+  } else {
+    productQuantity.textContent = 0;
+
+  }
+  const updateQuantity = quantityArray.reduce(
+    (previous, total) => previous + total,
+    0,
+  );
+  productQuantity.textContent = updateQuantity;
+
+};
+getTotalProductQuantity();
 fetchDataForHomePage(3);

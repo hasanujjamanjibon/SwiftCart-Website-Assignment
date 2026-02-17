@@ -50,7 +50,7 @@ const loadDataOnProductsPage = (products) => {
         </div>
         <!-- Add to Cart Button -->
         <div>
-          <button
+      <button onclick="addToCart(${id})"
             class="btn px-4 btn-primary"
           >
             <i
